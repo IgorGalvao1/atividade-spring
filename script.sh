@@ -1,7 +1,7 @@
 #!/bin/bash
 while true
 do
-    if ! systemctl is-active --quiet mysqld
+    if ! mysql -u root -e "CREATE DATABASE apllicationdb" &> /dev/null
     then
         sleep 1
     else
